@@ -20,6 +20,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * @author Jens Schauder
  */
-public interface Dependents // extends CrudRepository<Dependent, DependentId>
+public interface Dependents extends CrudRepository<Dependent, DependentId>
 {
 }
