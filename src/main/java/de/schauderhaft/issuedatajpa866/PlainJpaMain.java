@@ -43,7 +43,7 @@ public class PlainJpaMain {
 
 		DependentId id = new DependentId();
 		id.setEmp(3);
-		id.setName("Alfred");
+//		id.setName("Alfred");
 
 		em.find(Dependent.class, id);
 

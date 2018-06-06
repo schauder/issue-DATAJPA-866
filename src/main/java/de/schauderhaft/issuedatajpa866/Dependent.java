@@ -29,7 +29,7 @@ import java.io.Serializable;
 public class Dependent implements Serializable {
 
 
-	@Id
+	//@Id
 	String name;
 
 	// id attribute mapped by join column default

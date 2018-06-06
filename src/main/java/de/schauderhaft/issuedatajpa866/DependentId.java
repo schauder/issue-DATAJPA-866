@@ -23,15 +23,15 @@ import java.io.Serializable;
 public class DependentId implements Serializable {
 	long emp; // matches name of @Id attribute and type of Employee PK
 
-
-	String name; // matches name of @Id attribute
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+//
+//	String name; // matches name of @Id attribute
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 
 
 	public long getEmp() {
