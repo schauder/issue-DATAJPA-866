@@ -19,15 +19,18 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 
 /**
  * @author Jens Schauder
  */
 @Entity
 @IdClass(DependentId.class)
-public class Dependent {
+public class Dependent implements Serializable {
+
 	@Id
 	String name;
+
 	// id attribute mapped by join column default
 	@Id
 	@ManyToOne

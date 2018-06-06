@@ -15,11 +15,19 @@
  */
 package de.schauderhaft.issuedatajpa866;
 
-import org.springframework.data.repository.CrudRepository;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  * @author Jens Schauder
  */
-public interface Dependents // extends CrudRepository<Dependent, DependentId>
-{
+public class PlainJpaMain {
+
+	public static void main(String[] args) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("test");
+		EntityManager entityManager = factory.createEntityManager();
+
+		factory.close();
+	}
 }

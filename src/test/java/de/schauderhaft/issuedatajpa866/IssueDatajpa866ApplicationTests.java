@@ -10,8 +10,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class IssueDatajpa866ApplicationTests {
 
-	@Autowired
-	Dependents dependents;
+//	@Autowired
+//	Dependents dependents;
+
 	@Test
 	public void contextLoads() {
 	}

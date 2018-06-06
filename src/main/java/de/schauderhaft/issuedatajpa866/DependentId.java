@@ -21,8 +21,8 @@ import java.io.Serializable;
  * @author Jens Schauder
  */
 public class DependentId implements Serializable {
-	String name; // matches name of @Id attribute
 	long emp; // matches name of @Id attribute and type of Employee PK
+	String name; // matches name of @Id attribute
 
 	public String getName() {
 		return name;
