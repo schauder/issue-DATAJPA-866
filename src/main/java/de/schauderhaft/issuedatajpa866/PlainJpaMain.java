@@ -25,8 +25,25 @@ import javax.persistence.Persistence;
 public class PlainJpaMain {
 
 	public static void main(String[] args) {
+
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("test");
-		EntityManager entityManager = factory.createEntityManager();
+		EntityManager em = factory.createEntityManager();
+
+		em.getTransaction().begin();
+
+		Dependent dep = new Dependent();
+		dep.emp = new Employee();
+		dep.emp.setEmpId(3); ;
+		dep.emp.setEmpName("Jens");
+
+		em.persist(dep.emp);
+		em.persist(dep);
+		em.flush();
+
+		DependentId id = new DependentId();
+		id.setEmp(3);
+
+		em.find(Dependent.class, 3);
 
 		factory.close();
 	}

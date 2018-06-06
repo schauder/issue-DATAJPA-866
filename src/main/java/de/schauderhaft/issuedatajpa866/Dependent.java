@@ -28,9 +28,10 @@ import java.io.Serializable;
 @IdClass(DependentId.class)
 public class Dependent implements Serializable {
 
+/*
 	@Id
 	String name;
-
+*/
 	// id attribute mapped by join column default
 	@Id
 	@ManyToOne
