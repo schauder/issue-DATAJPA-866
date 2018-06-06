@@ -1,0 +1,13 @@
+== Project to play around with IdClasses
+
+This repository serves as a playground for reproducing DATAJPA-866.
+
+It contains
+
+* a simple domain model
+* a Spring Boot test exercising that model (acutally just loading the context)
+* a `PlainJpaMain` which exercises the model just using JPA, without Spring.
+
+In the current state both, JPA Application and Spring Test work fine.
+
+If one removes the name attribute form `Dependent` and `DependentId` both fail to work.

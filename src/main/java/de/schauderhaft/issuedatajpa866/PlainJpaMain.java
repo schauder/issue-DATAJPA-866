@@ -32,6 +32,7 @@ public class PlainJpaMain {
 		em.getTransaction().begin();
 
 		Dependent dep = new Dependent();
+		dep.name = "Alfred";
 		dep.emp = new Employee();
 		dep.emp.setEmpId(3); ;
 		dep.emp.setEmpName("Jens");
@@ -42,8 +43,9 @@ public class PlainJpaMain {
 
 		DependentId id = new DependentId();
 		id.setEmp(3);
+		id.setName("Alfred");
 
-		em.find(Dependent.class, 3);
+		em.find(Dependent.class, id);
 
 		factory.close();
 	}
